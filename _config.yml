@@ -4,7 +4,7 @@
 
 # Site
 title: 张明峰‘s Blog
-subtitle: '张明峰的个人博客'
+subtitle: '今日事，今日毕'
 description: '张明峰的个人博客'
 keywords:
 author: 张明峰
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://github.com/zhangmf/zhangmf.github.io.git
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
