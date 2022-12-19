@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 张明峰‘s Blog
+title: 张明峰's Blog
 subtitle: '今日事，今日毕'
 description: '张明峰的个人博客'
 keywords:
@@ -15,7 +15,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 # url: https://github.com/zhangmf/zhangmf.github.io.git
 # url: https://zhangmf.github.io
-url: https://zhangmf.github.io/public
+url: https://zhangmf.github.io
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
