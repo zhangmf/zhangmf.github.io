@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"zhangmf.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="title: lsspeaker: 张明峰plugins:    - echarts   {.text-landing.text-shadow}By 张明峰 {.text-intro} :fa-github: Github{.button.ghost}   {.text-landing.text-shadow}生成ppt对应的html 命令：   {.text-landing.text-shado">
+  <meta name="description" content="title: lsspeaker: 张明峰plugins:    - echarts   {.text-landing.text-shadow}By 张明峰 {.text-intro} :fa-github: Github{.button.ghost}   {.text-landing.text-shadow}生成ppt对应的html 命令：nodeppt build -d ..&#x2F;..&amp;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="张明峰&#39;s Blog">
 <meta property="og:url" content="https://zhangmf.github.io/slideshare/slide.html">
 <meta property="og:site_name" content="张明峰&#39;s Blog">
-<meta property="og:description" content="title: lsspeaker: 张明峰plugins:    - echarts   {.text-landing.text-shadow}By 张明峰 {.text-intro} :fa-github: Github{.button.ghost}   {.text-landing.text-shadow}生成ppt对应的html 命令：   {.text-landing.text-shado">
+<meta property="og:description" content="title: lsspeaker: 张明峰plugins:    - echarts   {.text-landing.text-shadow}By 张明峰 {.text-intro} :fa-github: Github{.button.ghost}   {.text-landing.text-shadow}生成ppt对应的html 命令：nodeppt build -d ..&#x2F;..&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-12-19T15:23:01.272Z">
-<meta property="article:modified_time" content="2022-12-19T15:23:01.267Z">
+<meta property="article:published_time" content="2022-12-19T15:30:44.362Z">
+<meta property="article:modified_time" content="2022-12-19T15:30:44.357Z">
 <meta property="article:author" content="张明峰">
 <meta name="twitter:card" content="summary">
 
@@ -178,15 +178,25 @@
 <slide class="bg-black-blue aligncenter" image="https://source.unsplash.com/C1HhAQrbykQ/ .dark">
 
 <h1 id="text-landing-text-shadow-1"><a href="#text-landing-text-shadow-1" class="headerlink" title="{.text-landing.text-shadow}"></a>{.text-landing.text-shadow}</h1><p>生成ppt对应的html</p>
-<p>命令：</p>
+<p>命令：nodeppt build -d ..&#x2F;..&#x2F;public&#x2F;nodeppt&#x2F; slide.md</p>
 <slide class="bg-black-blue aligncenter" image="https://source.unsplash.com/C1HhAQrbykQ/ .dark">
 
 <h1 id="text-landing-text-shadow-2"><a href="#text-landing-text-shadow-2" class="headerlink" title="{.text-landing.text-shadow}"></a>{.text-landing.text-shadow}</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe src=&quot;../../../../nodeppt/dist/slide.html&quot; width=&quot;100%&quot; height=&quot;500&quot; name=&quot;topFrame&quot; scrolling=&quot;yes&quot; noresize=&quot;noresize&quot; frameborder=&quot;0&quot; id=&quot;topFrame&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>
 
 <p>通过iframe展示html，需要配置相对路径src&#x3D;”..&#x2F;..&#x2F;..&#x2F;..&#x2F;nodeppt&#x2F;dist&#x2F;slide.html” </p>
+<p>:::note<br><strong>## Note here</strong><br>:::</p>
+<slide class="bg-black-blue aligncenter" video="https://webslides.tv/static/videos/working.mp4 ">
+
+<h1 id="text-landing-text-shadow-3"><a href="#text-landing-text-shadow-3" class="headerlink" title="{.text-landing.text-shadow}"></a>{.text-landing.text-shadow}</h1><h3 id="lt-slide-gt-语法"><a href="#lt-slide-gt-语法" class="headerlink" title="&lt;slide&gt; 语法"></a><code>&lt;slide&gt;</code> 语法</h3><p>nodeppt 会根据<code>&lt;slide&gt;</code>对整个 markdown 文件进行拆分，拆成单页的幻灯片内容。<code>&lt;slide&gt;</code> 标签支持下面标签：</p>
+<ul>
+<li>class&#x2F;style 等：正常的 class 类，可以通过这个控制居中（aligncenter），内容位置，背景色等</li>
+<li>image：背景图片，基本语法 <code>image=&quot;img_url&quot;</code></li>
+<li>video：背景视频，基本语法 <code>video=&quot;video_src1,video_src2&quot;</code></li>
+<li>:class：wrap 的 class，下面详解</li>
+</ul>
 <slide class="bg-black-blue aligncenter" image="https://source.unsplash.com/C1HhAQrbykQ/ .dark">
 
-<h1 id="text-landing-text-shadow-3"><a href="#text-landing-text-shadow-3" class="headerlink" title="{.text-landing.text-shadow}"></a>{.text-landing.text-shadow}</h1><p>我是最后一页</p>
+<h1 id="text-landing-text-shadow-4"><a href="#text-landing-text-shadow-4" class="headerlink" title="{.text-landing.text-shadow}"></a>{.text-landing.text-shadow}</h1><p>我是最后一页</p>
 
       </div>
       
@@ -248,7 +258,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow"><span class="nav-number">1.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-1"><span class="nav-number">2.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-2"><span class="nav-number">3.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-3"><span class="nav-number">4.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow"><span class="nav-number">1.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-1"><span class="nav-number">2.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-2"><span class="nav-number">3.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-3"><span class="nav-number">4.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lt-slide-gt-%E8%AF%AD%E6%B3%95"><span class="nav-number">4.0.1.</span> <span class="nav-text">&lt;slide&gt; 语法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#text-landing-text-shadow-4"><span class="nav-number">5.</span> <span class="nav-text">{.text-landing.text-shadow}</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
