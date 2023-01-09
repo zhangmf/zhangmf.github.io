@@ -101,9 +101,17 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: next
 
+# 部署配置
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repository: https://github.com/zhangmf/zhangmf.github.io.git
   branch: master
+
+# 搜索功能
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
